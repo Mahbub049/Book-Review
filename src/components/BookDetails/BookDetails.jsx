@@ -5,14 +5,15 @@ const BookDetails = () => {
     const books = useLoaderData();
     const {id} = useParams();
     const idInt = parseInt(id);
-    const book = books.find(book => book.bookId === idInt);
+    const book = books.find(bookEach => bookEach.bookId === idInt);
+    console.log(books, idInt)
 
-    const handleReadBook = idInt =>{
-        saveBookInformation(id);
+    const handleReadBook = () =>{
+        saveBookInformation(idInt);
     }
 
-    const handleWishlist = idInt => {
-        saveWishlistInformation(id);
+    const handleWishlist = () => {
+        saveWishlistInformation(idInt);
     }
     
     return (
