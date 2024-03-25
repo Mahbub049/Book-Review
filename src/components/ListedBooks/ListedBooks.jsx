@@ -3,15 +3,24 @@ import ReadBook from "../ReadBook/ReadBook";
 import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getBookInformation, getWishlistInformation} from "../Utilities/Utilities"
+import Wishlist from "../Wishlist/Wishlist";
 
 const ListedBooks = () => {
     const books = useLoaderData();
     const [readBooks, setReadBooks] = useState([]);
+    const [wishlistBooks, setWishlistBooks] = useState([]);
     useEffect(()=>{
         const storedBookId = getBookInformation();
         if(books.length>0){
             const booksRead = books.filter(book=>storedBookId.includes(book.bookId));
             setReadBooks(booksRead);
+        }
+    },[])
+    useEffect(()=>{
+        const wishlistBookId = getWishlistInformation();
+        if(books.length>0){
+            const booksWishlist = books.filter(book=>wishlistBookId.includes(book.bookId));
+            setWishlistBooks(booksWishlist);
         }
     },[])
     console.log(books)
@@ -36,7 +45,11 @@ const ListedBooks = () => {
                 </div>
 
                 <input type="radio" name="my_tabs_2" role="tab" className="tab text-lg" aria-label="Wishlist Books"/>
-                <div role="tabpanel" className="tab-content bg-base-100 rounded-box p-6">Tab content 2</div>
+                <div role="tabpanel" className="tab-content bg-base-100 rounded-box p-6">
+                {
+                        wishlistBooks.map((book,idx)=><Wishlist key={idx} book={book}></Wishlist>)
+                }
+                </div>
             </div>
         </div>
     );
