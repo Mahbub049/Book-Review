@@ -1,14 +1,20 @@
 import { useLoaderData, useParams } from "react-router-dom";
-
+import {saveBookInformation} from "../Utilities/Utilities"
+import { ToastContainer} from 'react-toastify';
 const BookDetails = () => {
     const books = useLoaderData();
     const {id} = useParams();
     const idInt = parseInt(id);
     const book = books.find(book => book.bookId === idInt);
-    console.log(book)
+
+    const handleReadBook = idInt =>{
+        saveBookInformation(id);
+        
+    }
     
     return (
         <div className="flex gap-6 h-[711px]">
+            <ToastContainer />
             <div className="flex-1 p-16">
                 <img className="w-2/4" src={book.image} alt="" />
             </div>
@@ -41,12 +47,13 @@ const BookDetails = () => {
                     </div>
                 </div>
                 <div className="flex gap-4">
-                    <button className="text-lg font-semibold border-2 rounded-lg py-[18px] px-[28px]">Read</button>
+                    <button onClick={handleReadBook} className="text-lg font-semibold border-2 rounded-lg py-[18px] px-[28px]">Read</button>
                     <button className="text-lg font-semibold bg-[#50B1C9] text-white rounded-lg py-[18px] px-[28px]">Wishlist</button>
                 </div>
 
             </div>
         </div>
+        
     );
 };
 
