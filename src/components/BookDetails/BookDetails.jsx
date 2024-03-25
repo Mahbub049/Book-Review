@@ -1,5 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import {saveBookInformation} from "../Utilities/Utilities"
+import { saveBookInformation, saveWishlistInformation} from "../Utilities/Utilities"
 import { ToastContainer} from 'react-toastify';
 const BookDetails = () => {
     const books = useLoaderData();
@@ -9,7 +9,10 @@ const BookDetails = () => {
 
     const handleReadBook = idInt =>{
         saveBookInformation(id);
-        
+    }
+
+    const handleWishlist = idInt => {
+        saveWishlistInformation(id);
     }
     
     return (
@@ -48,7 +51,7 @@ const BookDetails = () => {
                 </div>
                 <div className="flex gap-4">
                     <button onClick={handleReadBook} className="text-lg font-semibold border-2 rounded-lg py-[18px] px-[28px]">Read</button>
-                    <button className="text-lg font-semibold bg-[#50B1C9] text-white rounded-lg py-[18px] px-[28px]">Wishlist</button>
+                    <button onClick={handleWishlist} className="text-lg font-semibold bg-[#50B1C9] text-white rounded-lg py-[18px] px-[28px]">Wishlist</button>
                 </div>
 
             </div>

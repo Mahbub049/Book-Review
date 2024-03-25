@@ -15,11 +15,34 @@ const saveBookInformation = id => {
     if(!exists){
         savedBooks.push(id);
         localStorage.setItem('books', JSON.stringify(savedBooks));
-        toast.success("Wow so easy!");
+        toast.success("You read this book");
     }
     else{
         toast.error("You already added this book")
     }
 }
 
-export {getBookInformation, saveBookInformation}
+const getWishlistInformation = () => {
+    const wishlistStoredBooks = localStorage.getItem('wishlist');
+    if(wishlistStoredBooks){
+        return JSON.parse(wishlistStoredBooks);
+    }
+    return []
+}
+
+const saveWishlistInformation = id => {
+    const wishlistSavedBooks = getWishlistInformation();
+    const savedBooks = getBookInformation();
+    const existsBook = savedBooks.find(bookId=> bookId === id);
+    const exists = wishlistSavedBooks.find(bookId=> bookId === id);
+    if(!exists && !existsBook){
+        wishlistSavedBooks.push(id);
+        localStorage.setItem('wishlist', JSON.stringify(wishlistSavedBooks));
+        toast.success("You added to wishlist");
+    }
+    else{
+        toast.error("You already read this book")
+    }
+}
+
+export {getBookInformation, saveBookInformation, getWishlistInformation, saveWishlistInformation}
