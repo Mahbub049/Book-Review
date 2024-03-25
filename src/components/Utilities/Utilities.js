@@ -43,6 +43,10 @@ const saveWishlistInformation = id => {
     else{
         toast.error("You already read this book")
     }
+
+    if(existsBook){
+        
+    }
 }
 
 export {getBookInformation, saveBookInformation, getWishlistInformation, saveWishlistInformation}
