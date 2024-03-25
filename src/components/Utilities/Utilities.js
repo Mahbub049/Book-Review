@@ -44,9 +44,9 @@ const saveWishlistInformation = id => {
         toast.error("You already read this book")
     }
 
-    if(existsBook){
-        
-    }
+    // if(existsBook){
+    //     localStorage.removeItem()
+    // }
 }
 
 export {getBookInformation, saveBookInformation, getWishlistInformation, saveWishlistInformation}
