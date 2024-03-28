@@ -50,7 +50,7 @@ const BookDetails = () => {
                         <p className="font-semibold">{book.rating}</p>
                     </div>
                 </div>
-                <div className="flex justify-center lg:justify-start gap-4">
+                <div className="flex justify-center lg:justify-start gap-4 mb-10">
                     <button onClick={handleReadBook} className="text-lg font-semibold border-2 rounded-lg py-[18px] px-[28px]">Read</button>
                     <button onClick={handleWishlist} className="text-lg font-semibold bg-[#50B1C9] text-white rounded-lg py-[18px] px-[28px]">Wishlist</button>
                 </div>

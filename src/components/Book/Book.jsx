@@ -18,7 +18,7 @@ const Book = ({book}) => {
                     </div>
                     <h2 className="card-title text-2xl font-bold mb-4">{bookName}</h2>
                     <p className="font-medium">By: {author}</p>
-                    <hr className="border border-dashed py-5" />
+                    <hr className="border border-dashed my-5" />
                     <div className="flex justify-between">
                         <p className="font-medium">{category}</p>
                         <div className="flex gap-2 items-center">

@@ -4,12 +4,12 @@ const ContactFAQ = () => {
     return (
         <div>
             <div className="py-[50px] bg-gray-100 mb-5 rounded-xl"><h2 className="text-[32px] lg:text-[40px] font-bold text-center">Frequently Asked Questions</h2></div>
-            <div className='px-[10%]'>
+            <div className='px-[10%] space-y-3'>
                 <div className="collapse collapse-plus bg-base-200">
                     <input type="radio" name="faq-accordion" id="faq-accordion-1" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
                     How do I add a book to my reading list?
-                    </div>
+                </div>
                     <div className="collapse-content">
                     <p>To add a book to your reading list, simply navigate to the book's details page and click the "Add to Reading List" button.</p>
                     </div>

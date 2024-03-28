@@ -68,7 +68,7 @@ const ListedBooks = () => {
             
 
             <div role="tablist" className="tabs tabs-lifted">
-                <input type="radio" name="my_tabs_2" role="tab" className="tab text-lg" aria-label="Read Books" checked={activeTab === "read"} onChange={() => handleTabChange("read")} />
+                <input type="radio" name="my_tabs_2" role="tab" className="tab text-lg mx-8" aria-label="Read Books" checked={activeTab === "read"} onChange={() => handleTabChange("read")} />
                 <div role="tabpanel" className="tab-content bg-base-100 rounded-box p-6">
                     {
                         sorting(readBooks, sort).map((book,idx)=><ReadBook key={idx} book={book}></ReadBook>)
