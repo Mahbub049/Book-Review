@@ -7,6 +7,8 @@ const Header = () => {
         <li className="mr-4 text-lg"><NavLink to={"/"}>Home</NavLink></li>
         <li className="mr-4 text-lg"><NavLink to={"/listed"}>Listed Books</NavLink></li>
         <li className="mr-4 text-lg"><NavLink to={"/pages"}>Pages to Read</NavLink></li>
+        <li className="mr-4 text-lg"><NavLink to={"/blogs"}>Blog</NavLink></li>
+        <li className="mr-4 text-lg"><NavLink to={"/faq"}>Contact Us and FAQ</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100 my-[52px]">

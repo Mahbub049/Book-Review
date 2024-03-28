@@ -13,6 +13,8 @@ import PagesToRead from './components/PagesToRead/PagesToRead.jsx';
 import Home from './components/Home/Home.jsx';
 import BookDetails from './components/BookDetails/BookDetails.jsx';
 import Errorpage from './components/Errorpage/Errorpage.jsx';
+import Blog from './components/Blog/Blog.jsx';
+import ContactFAQ from './components/ContactFAQ/ContactFAQ.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,15 @@ const router = createBrowserRouter([
         path: "/books/:id",
         loader: ()=> fetch('/books.json'),
         element: <BookDetails></BookDetails>
+      },
+      {
+        path: "/blogs",
+        loader: ()=> fetch('/blog.json'),
+        element: <Blog></Blog>
+      },
+      {
+        path: '/faq',
+        element: <ContactFAQ></ContactFAQ>
       }
     ]
   }

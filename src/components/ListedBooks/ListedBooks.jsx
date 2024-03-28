@@ -53,7 +53,9 @@ const ListedBooks = () => {
 
     return (
         <div>
-            <h2 className="pb-[64px] text-[28px] font-bold text-center">Books</h2>
+            <div className="bg-gray-100 rounded-xl mb-6">
+                <h2 className="py-[48px] text-[28px] font-bold text-center">Books</h2>
+            </div>
 
             <div className="dropdown dropdown-bottom flex justify-center mb-14">
                 <div tabIndex={0} role="button" className="btn m-1 text-lg font-semibold bg-[#23BE0A] text-white">Sort By <RiArrowDropDownLine /></div>
