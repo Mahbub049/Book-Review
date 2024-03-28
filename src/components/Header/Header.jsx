@@ -11,7 +11,7 @@ const Header = () => {
         <li className="mr-4 text-lg"><NavLink to={"/faq"}>Contact Us and FAQ</NavLink></li>
     </>
     return (
-        <div className="navbar bg-base-100 my-[52px]">
+        <div className="navbar bg-base-100 my-[32px] lg:my-[52px]">
             <div className="navbar-start">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,7 +28,7 @@ const Header = () => {
                 {list}
                 </ul>
             </div>
-            <div className="navbar-end  font-semibold">
+            <div className="navbar-end  font-semibold lg:flex hidden">
                 <a className="btn text-lg text-white bg-[#23BE0A] mr-4">Sign In</a>
                 <a className="btn text-lg text-white bg-[#59C6D2]">Sign Up</a>
             </div>

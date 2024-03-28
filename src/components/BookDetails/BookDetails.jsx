@@ -17,10 +17,10 @@ const BookDetails = () => {
     }
     
     return (
-        <div className="flex gap-6 h-[711px]">
+        <div className="flex flex-col lg:flex-row gap-6 h-[711px] px-5">
             <ToastContainer />
             <div className="flex-1 p-16">
-                <img className="w-2/4" src={book.image} alt="" />
+                <img className="lg:w-2/4" src={book.image} alt="" />
             </div>
             <div className="flex-1">
                 <h3 className="text-[40px] mb-4 font-bold">{book.bookName}</h3>
@@ -50,7 +50,7 @@ const BookDetails = () => {
                         <p className="font-semibold">{book.rating}</p>
                     </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex justify-center lg:justify-start gap-4">
                     <button onClick={handleReadBook} className="text-lg font-semibold border-2 rounded-lg py-[18px] px-[28px]">Read</button>
                     <button onClick={handleWishlist} className="text-lg font-semibold bg-[#50B1C9] text-white rounded-lg py-[18px] px-[28px]">Wishlist</button>
                 </div>

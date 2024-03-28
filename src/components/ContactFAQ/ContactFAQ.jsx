@@ -3,7 +3,7 @@ import React from 'react';
 const ContactFAQ = () => {
     return (
         <div>
-            <div className="py-[50px] bg-gray-100 mb-5 rounded-xl"><h2 className="text-[40px] font-bold text-center">Frequently Asked Questions</h2></div>
+            <div className="py-[50px] bg-gray-100 mb-5 rounded-xl"><h2 className="text-[32px] lg:text-[40px] font-bold text-center">Frequently Asked Questions</h2></div>
             <div className='px-[10%]'>
                 <div className="collapse collapse-plus bg-base-200">
                     <input type="radio" name="faq-accordion" id="faq-accordion-1" defaultChecked />
@@ -70,9 +70,10 @@ const ContactFAQ = () => {
                 </div>
 
             </div>
-            <div className="mt-[100px] py-[50px] bg-gray-100 mb-5 rounded-xl"><h2 className="text-[40px] font-bold text-center">Contact Us</h2>
+            <div className="mt-[50px] lg:mt-[100px] py-[50px] bg-gray-100 mb-5 rounded-xl px-5 lg:px-0">
+            <h2 className="text-[40px] font-bold text-center">Contact Us</h2>
             <p className='text-center'>Please take a moment to get in touch, we will get back to you shortly.</p>
-            <div className='flex gap-3 mt-[100px]'>
+            <div className='flex flex-col lg:flex-row gap-3 mt-[50px] lg:mt-[100px]'>
                 <div className='flex-1'>
                     <div className='flex flex-col gap-3 mb-8 text-lg'>
                         <p>Your Name</p>
